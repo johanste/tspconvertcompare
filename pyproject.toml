@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "tspconvertcompare"
+version = "0.1.0"
+description = "Do a semantic comparison of openapi2/swagger files generated from TypeSpec"
+authors = ["Johan Stenberg (MSFT) <johan.stenberg@microsoft.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+tspconvertcompare = "tspconvertcompare:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+jsonpatch = "^1.33"
+json-merge-patch = "^0.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+black = "^24.3.0"
+pyright = "^1.1.356"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
